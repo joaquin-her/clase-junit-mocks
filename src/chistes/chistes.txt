@@ -1,0 +1,20 @@
+¿Por qué los programadores prefieren la oscuridad? Porque les gusta eclipse.
+¿Cómo saludan los programadores? HolaMundo.
+¿Qué hace un programador en su tiempo libre? Depurar.
+¿Por qué los programadores odian los centros comerciales? Demasiadas ventanas.
+¿Qué hace un programador cuando está aburrido? Itera.
+¿Por qué los elfos no dicen secretos? Porque son "elf-icientes" en mantenerlos.
+¿Qué le dice un árbol de Navidad a otro? ¡Deja de "pinos-nervioso"!
+¿Cómo se despiden los muñecos de nieve? "Nos vemos en el polo".
+¿Qué hacen los renos en la lluvia? Se mojan los "ast-rios".
+¿Por qué Santa no usa una computadora? Porque le preocupa el "clima-tizado".
+Why don't elves tell secrets? Because they are "elf-icient" at keeping them.
+What does one Christmas tree say to another? Stop being "pine-sive"!
+How do snowmen say goodbye? "See you in the North Pole".
+What do reindeer do in the rain? They get their "hooves-icles" wet.
+Why doesn't Santa use a computer? Because he's worried about the "climate-ization".
+Why do programmers prefer the dark? Because they love Eclipse.
+How do programmers greet each other? HelloWorld.
+What does a programmer do in their free time? Debug.
+Why do programmers hate shopping malls? Too many Windows.
+What does a programmer do when they're bored? Iterate.
