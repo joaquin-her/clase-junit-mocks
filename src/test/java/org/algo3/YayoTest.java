@@ -184,4 +184,30 @@ public class YayoTest {
     public void testSame() {
         Assert.assertEquals(1, 1);
     }
+
+    @Test 
+    public void yayoCuentaUnChisteDesdeUnTxt(){
+
+        //Arrange
+
+        Invitado invitadoStub = mock(Invitado.class);
+        BufferedReader brMock = Mockito.mock(BufferedReader.class);
+        ProveedorTxt proveedor = spy(new ProveedorTxt());
+        Tiempo tiempoStub = mock(Tiempo.class);
+        when(tiempoStub.obtenerDiaDeHoy()).thenReturn(2);
+        // Usamos Mockito.when().thenReturn() para especificar qué debería devolver el mock cuando se llamen ciertos métodos. 
+        // En este caso, simulamos las lecturas de líneas del archivo:
+        Mockito.when(brMock.readLine()).thenReturn("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19");
+
+        // Espiar la clase ProveedorTxt
+        doReturn(brMock).when(proveedor).crearBufferedReader();
+
+        // Llamar al método a probar
+        Yayo yayo = new Yayo(proveedor, invitadoStub);
+        Chiste = yayo.contarChiste(tiempoStub);
+
+        // Verificar que readLine se llamó entre 16 y 21 veces
+        verify(brMock, atLeast(1)).readLine();
+        verify(brMock, atMost(5)).readLine();
+    }
 }
