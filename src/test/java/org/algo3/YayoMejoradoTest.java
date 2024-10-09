@@ -156,4 +156,34 @@ public class YayoMejoradoTest {
     public void testSame() {
         Assert.assertEquals(1, 1);
     }
+
+    @Test
+    public void yayoDevuelve3DeSusMejoresChistes(){
+        //Arrange
+        Chiste[] chistes = new Chiste[]{new Chiste("Christmas", "Hello pepe!", "Hi Mark"),
+        new Chiste("Christmas", "Hello pepe!", "Hi Clark"),
+        new Chiste("Christmas", "Hello pepe!", "Hi Kim"),
+        new Chiste("Christmas", "Hello pepe!", "Hi Ben"),
+        new Chiste("Christmas", "Hello pepe!", "Hi Ken")
+        };
+        when(tiempoMock.obtenerDiaDeHoy()).thenReturn(5);
+        Yayo yayo = new Yayo(YayoMejoradoTest.this.proveedorMock, invitadoMock);
+        int puntaje = 10;
+        for (Chiste chiste : chistes) {
+            when(YayoMejoradoTest.this.proveedorMock.solicitarChiste("Christmas", "en")).thenReturn(chiste);
+            when(invitadoMock.puntuar(chiste)).thenReturn(puntaje);
+            Chiste ch = yayo.contarChiste(tiempoMock);
+            puntaje -= 1;
+        };
+        //Act
+        ArrayList<Chiste> mejoresChistes = yayo.mejoresChistes(3);
+
+        //Assert
+        for (int i = 0; i < chistes.length; i++) {
+            if (i < 3) {
+                assert (mejoresChistes.contains(chistes[i]));
+            } else assert (!mejoresChistes.contains(chistes[i]));
+        }
+
+    }
 }
