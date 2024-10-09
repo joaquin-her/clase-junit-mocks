@@ -1,2 +1,4 @@
-package org.algo3.modelo;public class ChistesInsuficientes {
+package org.algo3.modelo;
+
+public class ChistesInsuficientes extends RuntimeException  {
 }
